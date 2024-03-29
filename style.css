@@ -1,0 +1,305 @@
+@font-face {
+    font-family: "byekan";
+    src: url(byekan/Byekan.woff) format("woof"),
+    url(byekan/Byekan.ttf) format('truetype')
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+body{
+    font-family: byekan , tahoma , Aria;
+    padding: 0 40px;
+}
+.continer{
+    width: 100%;   
+}
+
+
+/* --------nav----------------------------------------- */
+
+nav{
+    width:100%;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 8px lightgray;
+    background-color: whitesmoke;
+    user-select: none;
+    z-index: 2;
+}
+
+/* right menue */
+nav .header-right{
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+nav .header-right ul{
+    width: 75%;
+    height: 100%;
+    margin-right: 40px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+nav .header-right ul li{
+    margin: 0px 15px;
+    position: relative;
+}
+nav .header-right ul li a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(143, 140, 140);
+    height: 70px;
+    line-height: 70px;
+}
+nav .header-right ul li i{
+    display: inline-block;
+    color: rgb(143, 140, 140);
+    margin: 3px ;
+    transition: 0.4s;
+}
+nav .header-right ul li:hover i{
+    transform: rotate(180deg);
+}
+nav .header-right ul li.singin {
+    display:none;
+}
+
+nav .header-right #btn-mnue{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px 10px;
+    color: #268ed9;
+    display: none;
+}
+
+/* right menue dropdown*/
+nav .header-right .dropdown{
+    min-width: 200px;
+    height: auto;
+    position: absolute;
+    right: -50px;
+    box-shadow: 0 2px 8px #80c7f7;
+    display:none;
+    border-radius: 8px;
+} 
+nav .header-right ul li:hover .dropdown{
+    display: block;
+    
+}
+nav .header-right ul li .dropdown li{
+    margin: 0px;
+    padding: 0px 10px;
+    transition: 0.5s;
+    background-color: white;
+}
+nav .header-right ul li .dropdown li a{
+    color: #555454;
+}
+nav .header-right ul li .dropdown li:hover{
+    box-shadow: 0 2px 8px #80c7f7;
+    transform: scale(1.1);
+}
+/* left menue */
+
+nav .header-left{
+    width: 20%;
+    text-align: left;
+}
+nav .header-left a , nav .header-right ul li.singin a{
+    display: inline-block;
+    padding: 5px 15px;
+    color: #288ed9;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+nav .header-left a.login{
+    background-color: #288ed9;
+    color: white;
+}
+
+/* ------------------------head------------------------------------- */
+
+section.head{
+    margin-top: 80px;
+    width: 100;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+
+}
+
+section .section-right{
+    width: 50%;
+}
+section .section-right img{
+    width: 90%; 
+}
+section .section-left{
+    width: 40%;
+}
+section .section-left h2{
+    color: #288ed9;
+    margin: 30px 0px;
+}
+section .section-left p{
+    font-size: 20px;
+    color: gray;
+    text-align: justify;
+}
+section .section-left .continer-button{
+    margin: 20px 10px ;
+}
+section .section-left .login{
+    padding:  8px 20px 8px 30px;
+    border-radius: 30px;
+    background-color: #288ed9;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    transition: all .3s; 
+}
+section .section-left .login i{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translatey(-50%); 
+    transition: all .3s; 
+}
+
+section .section-left .login:hover i{
+    left: 10px;
+}
+section .section-left .login:hover {
+    background-color: #206a9e;
+}
+section .section-left .continer-button .mohaver{
+    color: gray;
+    margin: 0 10px
+    font-size 20px;
+    padding-right: 30px;
+    transition: 0.5s;
+}
+section .section-left .continer-button .mohaver:hover{
+    color: rgb(68, 67, 67);
+    font-weight: bold;
+}
+
+/* ---------------card -------------------------------------------------- */
+
+.continer-card{
+    width: 100%;
+    background-color: #d6eefd;
+    padding-top: 100px;
+}
+
+.continer-card .head-title{
+    color: #268ed9;
+    text-align:center ;
+    font-size: 25px;
+}
+.continer-card .text-title{
+    color: #9d9999;
+    text-align: center;
+    font-size: 23px;
+}
+
+.continer-card .cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.continer-card .cards .item{
+    flex: 300px 0 1 ; 
+    margin: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 10px;
+    transition: all.5s;
+}
+.continer-card .cards .item:hover{
+    box-shadow: 0 0 30px #a8d5e2;
+}
+section.continer-card .cards .item img{
+    display: block;
+    margin: auto;
+    width: 220px;
+    
+}
+
+section.continer-card .card-title{
+    text-align: center;
+    color: #288ed9;
+}
+
+section.continer-card .description{
+    text-align: justify;
+    font-size: 18px;
+    color: gray;
+}
+
+section.continer-card  .card-btn{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    right:0px;
+    background-color: white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -15px 18px white;
+    opacity: 0;
+    transition: .5s;
+}
+section.continer-card .cards .item:hover .card-btn{
+    opacity: 1;
+}
+section.continer-card a.act{
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #268ed9;
+    color: white;
+    border-radius: 20px;
+    transition: .4s;
+}
+section.continer-card a.act:hover{
+    background-color: #206a9e;
+}
+/* panel card */
+section.continer-card .cards .card-panel{
+    flex: 550px 0 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+section.continer-card .cards .card-panel .panel {
+    width: 60%;
+}
+section.continer-card .cards .card-panel img{
+    width: 40%;
+}
